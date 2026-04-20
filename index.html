@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry Selection | Premium Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="favicon_io/">
+    <style>
+        :root {
+            --bg-color: #0c111d;
+            --card-bg: #161c28;
+            --accent-blue: #3b82f6;
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 0 1.5rem 4rem 1.5rem;
+        }
+
+        /* --- Branding Navigation --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            max-width: 1100px;
+            margin: 0 auto 3rem auto;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--accent-blue);
+            border-radius: 8px;
+        }
+
+        /* --- Header & Search Section --- */
+        .header-section {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .header-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* --- Search Bar --- */
+        .search-container {
+            position: relative;
+            max-width: 500px;
+            margin: 2rem auto 0 auto;
+        }
+
+        #industrySearch {
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            padding: 1rem 1rem 1rem 3.5rem;
+            border-radius: 14px;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #industrySearch:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        /* --- Industry Grid --- */
+        .industry-grid {
+            display: grid;
+            gap: 1.25rem;
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 768px) {
+            .industry-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .industry-grid {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+
+        .industry-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        /* Logic for "Not Found" state */
+        .hidden {
+            display: none !important;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-5px);
+            background-color: #1c2536;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .industry-icon {
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+            display: block;
+            color: var(--accent-blue);
+        }
+
+        .industry-label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        /* Empty state message */
+        #noResults {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            display: none;
+        }
+       
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+
+
+
+            <svg id="brand" width="150px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 453.26 60.11">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: #ffffff;
+                            width: 250px;
+                        }
+                    </style>
+                </defs>
+                <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                        <path class="cls-1"
+                            d="M23.22,58.63H0V48.39H3.28V29.94H0V19.62H14.77l1.72,4.61c1.26-1.48,4.85-5.7,9.78-5.7,7.89,0,10.39,3.75,11.64,5.63,2.43-2.74,6.1-5.63,11.49-5.63C62.07,18.53,64,27.75,64,37.29V48.08h3.83V58.63H48V39.48c0-3.76.7-9.7-3-9.7-3.36,0-4.15,2.35-4.15,5.71V48.15h4.69V58.63H25.33V38.7c0-6.34-.16-8.92-3.29-8.92-2.5,0-3.51,1.49-3.51,4.69V48.39h4.69Z" />
+                        <path class="cls-1"
+                            d="M92.87,58.63H71V48.39h3.29V29.71H71V19.54H89.12V48.39h3.75ZM81.61.16a8.4,8.4,0,0,1,8.6,8c0,4.3-3,7.9-8.6,7.9a8.42,8.42,0,0,1-8.44-7.9A8.2,8.2,0,0,1,81.61.16Z" />
+                        <path class="cls-1"
+                            d="M118,29c-4.61,0-6.88,4.93-6.88,10s3,9.14,8.06,9.22c4.14.08,6.87-1.64,9.45-4.45l6.88,8a26.77,26.77,0,0,1-19.15,8c-11.49,0-21.5-6.95-21.5-20.87s9.23-20,19.23-20a12.58,12.58,0,0,1,9.78,4.46l1.32-3.76h9.23V37.21H123C122.81,33.46,121.64,29,118,29Z" />
+                        <path class="cls-1"
+                            d="M160.41,58.63H138.29V48.39h3.44V29.71h-3.36V19.54h14.69l2.35,5c2-3.76,4.07-7,12.12-7V31.66c-7,0-11,1.8-11,8.68v8h3.91Z" />
+                        <path class="cls-1"
+                            d="M169.56,38.93C169.64,25.87,180.19,18.6,191,18.6c12.35.16,21.5,7.59,21.73,20.64s-9.46,20.41-21.34,20.41C180.19,59.65,169.4,52.77,169.56,38.93Zm27.13.31c0-5.86-2-10.39-5.71-10.47-3,0-5.4,4.53-5.4,10.24,0,6.41,2.51,10.63,5.79,10.63S196.69,45.11,196.69,39.24Z" />
+                        <path class="cls-1"
+                            d="M214.74,19.54H219V12.35l14.38-4.61v11.8h7.43V29.71h-7.43V43.62c0,2.66-.55,6.25,2.5,6.25a18.13,18.13,0,0,0,4.93-1.32v10c-2.35.94-7.67,1.49-9.46,1.49C219.59,60,219.2,53.63,219,43.62V29.71h-4.23Z" />
+                        <path class="cls-1"
+                            d="M244.76,22.83c3.13-1.88,9.85-5.55,17-5.55,9.39,0,21.19,3.51,21.19,16.1V48.62h4.69v10H271l-1.87-3.52c-2.9,4-7.74,5-10.56,5-7.42,0-15.4-4-15.4-13,0-8.83,7.43-14.38,16.26-14.38a11.11,11.11,0,0,1,7.74,2.73V32.68c0-3.52-3.2-4.38-7.43-4.38-4.61,0-8.67,1.95-11.64,3.59Zm22.36,24.54v-3c-.23-.39-1.33-2.26-4.61-2.26-3.13,0-4.54,1.71-4.54,4.14,0,2.19,1.8,3.67,4.15,3.67A6.12,6.12,0,0,0,267.12,47.37Z" />
+                        <path class="cls-1"
+                            d="M290,58.63V44.56H300.5c0,4.14,5.94,5.24,8.29,5.24,1.56,0,3.44-.47,3.44-2.66,0-2.35-5.87-2.74-11.49-4.69-5.32-1.88-10.4-5.16-10.4-12.51,0-8,8.21-11.34,13.76-11.34,5.31,0,10,2.74,11.65,6.1l.62-5.16H326V33.61H315.82c0-3.28-4.06-5.94-8-5.94a2.73,2.73,0,0,0-3.05,2.82c0,2.19,4.61,3.12,9.62,4.84,5.94,2,12.58,4.3,12.58,12.51,0,7.35-7,11.73-14.54,11.73-5.63,0-10.08-2.74-12-5.71l-.7,4.77Z" />
+                        <path class="cls-1"
+                            d="M331.54,58.63V48.47h3.2V10.24h-3.2V0h18V35.33l9.07-5.39H353V19.62h21.89V29.94h-6l-5.31,3.36,10.55,15.09h3.91V58.63H354.91V48.39h3.28L352.25,40l-2.73,1.87v6.57h2.89V58.63Z" />
+                        <path class="cls-1"
+                            d="M420.89,53.24c-5.78,5-12,6.8-20.17,6.8-9.69,0-20.64-6.18-20.64-21.19,0-12.82,9.23-20.4,21-20.4,9.31,0,16.42,4.77,18.69,11.33.93,2.74,1.79,8.76.15,13.21H395.33c.47,2.12,1.48,6.41,8.05,6.41a15.89,15.89,0,0,0,10.94-3.75Zm-25.33-18h11.81c-.08-3-.79-6.26-5.79-6.26C396.81,29,395.72,33.3,395.56,35.26Z" />
+                        <path class="cls-1"
+                            d="M446.14,58.63H424V48.39h3.44V29.71H424.1V19.54h14.69l2.35,5c2-3.76,4.06-7,12.12-7V31.66c-7,0-11,1.8-11,8.68v8h3.91Z" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div style="font-size: 0.6rem; color: var(--text-muted);">WHATSAPP GATEWAY</div>
+    </nav>
+
+    <header class="header-section">
+        <h1>Browse by Industry</h1>
+        <p>Select your niche to join the official WhatsApp channel.</p>
+
+        <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="industrySearch" placeholder="Search your industry...">
+        </div>
+    </header>
+
+    <div id="noResults">No industries found matching your search.</div>
+
+    <div class="industry-grid" id="industryGrid">
+        <a href="https://whatsapp.com/channel/0029Vb8FeeBIiRp1LCMU1t0y" class="industry-card" data-name="real estate">
+            <i class="fa-solid fa-building industry-icon"></i>
+            <span class="industry-label">Real Estate</span>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029Vb8MvkFA89MreKJfsm3Z" class="industry-card" data-name="food drink restaurant">
+            <i class="fa-solid fa-utensils industry-icon"></i>
+            <span class="industry-label">Food & Drink</span>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029VbCgGg6DeONAmxgiKE40" class="industry-card" data-name="business corporate office">
+            <i class="fa-solid fa-briefcase industry-icon"></i>
+            <span class="industry-label">Business & Corporate</span>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029VbCgGg6DeONAmxgiKE40" class="industry-card" data-name="education schools learning">
+            <i class="fa-solid fa-graduation-cap industry-icon"></i>
+            <span class="industry-label">Education & Schools</span>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029VbDHbv49sBI6qX1mld3Y" class="industry-card" data-name="travel agency tourism">
+            <i class="fa-solid fa-plane industry-icon"></i>
+            <span class="industry-label">Travel Agency</span>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029Vb851eP5Ejy2RpJXGj2O" class="industry-card" data-name="e commerce shopping store">
+            <i class="fa-solid fa-store industry-icon"></i>
+            <span class="industry-label">E-commerce</span>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029VbCSdWYKbYMMCOWgi12y" class="industry-card" data-name="medical health doctor">
+            <i class="fa-solid fa-briefcase-medical industry-icon"></i>
+            <span class="industry-label">Medical</span>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029VbCjM89JZg3zHsmFqi1z" class="industry-card" data-name="gaming games e-sports">
+            <i class="fa-solid fa-gamepad industry-icon"></i>
+            <span class="industry-label">Gaming</span>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029VbCilHNIiRooCHbagt3L" class="industry-card" data-name="tech saas software ai">
+            <i class="fa-solid fa-laptop industry-icon"></i>
+            <span class="industry-label">Tech & SaaS</span>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029Vb7Go4UJ93wQDBgmPr20" class="industry-card" data-name="gym fitness workout">
+            <i class="fa-solid fa-dumbbell industry-icon"></i>
+            <span class="industry-label">Gym & Fitness</span>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029VbC81b5F6sn70qIVSS2L" class="industry-card" data-name="fashion clothes style">
+            <i class="fa-solid fa-shirt industry-icon"></i>
+            <span class="industry-label">Fashion & Clothes</span>
+        </a>
+
+      <a href="https://whatsapp.com/channel/0029Vb851eP5Ejy2RpJXGj2O" class="industry-card" data-name="cash n carry retail grocery wholesale">
+    <i class="fa-solid fa-basket-shopping industry-icon"></i>
+    <span class="industry-label">Cash n Carry</span>
+</a>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('industrySearch');
+        const cards = document.querySelectorAll('.industry-card');
+        const noResults = document.getElementById('noResults');
+
+        searchInput.addEventListener('input', (e) => {
+            const value = e.target.value.toLowerCase();
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const name = card.getAttribute('data-name');
+                if (name.includes(value)) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Show "No Results" message if everything is hidden
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        });
+    </script>
+</body>
+
+</html>
