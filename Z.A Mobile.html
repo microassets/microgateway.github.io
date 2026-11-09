@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Z.A Mobile – Phones &amp; Accessories</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--tx:#0a0a0a;--mut:#6b7280;--sf:#f5f6f8;--bd:#e8eaee;--pr:#2563eb;--or:#ff6b2c;--dk:#0b1020;--card:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0f1a;--tx:#f3f4f6;--mut:#9aa3b2;--sf:#121829;--bd:#232b3f;--card:#10162a;--dk:#060913}}
+:root[data-theme="dark"]{--bg:#0b0f1a;--tx:#f3f4f6;--mut:#9aa3b2;--sf:#121829;--bd:#232b3f;--card:#10162a;--dk:#060913}
+html{scroll-behavior:smooth;scroll-padding-top:150px}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--tx);line-height:1.5;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--pr);outline-offset:2px}
+.w{max-width:1280px;margin:auto;padding:0 20px}
+.top{background:#000;color:#fff;text-align:center;font-size:12.5px;padding:8px 12px}
+.top b{color:#fff}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--bg);border-bottom:1px solid var(--bd)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:31}
+.hd{display:flex;align-items:center;gap:16px;padding:12px 20px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:21px;letter-spacing:-.02em}
+.logo i{width:34px;height:34px;border-radius:10px;background:var(--pr);display:grid;place-items:center;font-style:normal;color:#fff;font-size:16px}
+.logo em{font-style:normal;color:var(--pr)}
+.sr{position:relative;flex:1;display:flex;min-width:0;border:1px solid var(--bd);border-radius:12px;background:var(--sf);transition:border-color .2s,box-shadow .2s}.sr:focus-within{border-color:var(--pr);box-shadow:0 0 0 3px #2563eb26}
+.sr select{border:0;background:none;padding:0 10px;border-right:1px solid var(--bd);font-size:13px;max-width:140px}
+.sr input{flex:1;border:0;background:none;padding:11px 12px;min-width:0;outline:0}
+.sr>button{background:var(--pr);color:#fff;padding:0 18px;border-radius:0 11px 11px 0;transition:background .2s}.sr>button:hover{background:#1d4ed8}
+.ic{display:flex;gap:6px;margin-left:auto}
+.ic button{position:relative;display:grid;justify-items:center;font-size:11px;color:var(--mut);padding:4px 10px;gap:0}
+.ic button span.g{font-size:20px;color:var(--tx);line-height:1.2}
+.cc{position:absolute;top:-2px;right:4px;background:var(--or);color:#fff;border-radius:99px;font-size:10px;min-width:17px;height:17px;display:grid;place-items:center;font-weight:700}
+nav.cats{display:flex;gap:24px;padding:10px 20px;font-size:14px;font-weight:500;overflow-x:auto;white-space:nowrap;border-top:1px solid var(--bd)}
+nav.cats a{cursor:pointer}nav.cats a:hover{color:var(--pr)}
+nav.cats .fs{margin-left:auto;color:var(--or);font-weight:700}
+.burger{display:none;font-size:24px;padding:4px 8px}
+.hero{position:relative;margin-top:20px;border-radius:24px;overflow:hidden;background:var(--dk);color:#fff;min-height:440px}
+.sl{position:absolute;inset:0;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:20px;padding:40px 56px;opacity:0;visibility:hidden;transition:opacity .6s}
+.sl.on{opacity:1;visibility:visible}
+.sl small{color:#8fb0ff;font-weight:700;font-size:12px;letter-spacing:.08em}
+.sl h1{font-size:clamp(34px,5vw,60px);line-height:1.05;letter-spacing:-.03em;font-weight:600;margin:12px 0}
+.sl p{color:#cbd5e1;max-width:420px}
+.sl .pz{margin:18px 0 6px;font-size:13px;color:#94a3b8}
+.sl .pv{font-size:28px;font-weight:700;margin-bottom:20px}
+.sl .art{position:relative;aspect-ratio:4/5;background:#ffffff12;max-width:360px;justify-self:center;width:100%;border-radius:28px;overflow:hidden;transform:rotate(4deg);box-shadow:0 30px 80px #0008}
+.sl .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.chip{z-index:1;position:absolute;background:#ffffff26;backdrop-filter:blur(10px);border:1px solid #ffffff30;border-radius:12px;padding:6px 12px;font-size:11px;color:#e2e8f0}
+.chip b{display:block;color:#fff;font-size:15px}
+.btn{background:var(--pr);color:#fff;border-radius:10px;padding:10px 16px;font-weight:600;font-size:14px;width:100%;transition:transform .15s,background .15s}
+.btn:hover{background:#1d4ed8}.btn:active{transform:scale(.97)}
+.btn.w2{background:#fff;color:#0a0a0a;width:auto;padding:12px 22px;border-radius:12px}
+.btn.or{background:var(--or);color:#fff;width:auto;padding:12px 20px}
+.btn.ok{background:#16a34a}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.dots{display:flex;justify-content:center;gap:6px;margin:14px 0}
+.dots button{width:8px;height:8px;border-radius:9px;background:var(--bd);transition:width .3s}
+.dots button.on{width:26px;background:var(--pr)}
+.brands{display:flex;border:1px solid var(--bd);border-radius:18px;overflow-x:auto;align-items:center}
+.brands span{padding:0 24px;font-size:11px;color:var(--mut);font-weight:700;white-space:nowrap}
+.brands button{flex:1;min-width:100px;padding:20px 10px;font-weight:800;border-left:1px solid var(--bd)}
+.brands button:hover,.brands button.on{color:var(--pr)}
+.sec{padding:56px 0 0}
+.sh{display:flex;justify-content:space-between;align-items:end;margin-bottom:20px;gap:12px;flex-wrap:wrap}
+.sh h2{font-size:clamp(24px,3vw,32px);letter-spacing:-.02em;font-weight:600}
+.sh small{color:var(--pr);font-weight:700;font-size:12px;display:block}
+.sh a,.sh button.lk{color:var(--pr);font-weight:600;font-size:14px}
+.cg{display:grid;grid-template-columns:repeat(9,1fr);gap:12px}
+.ct{display:grid;justify-items:center;gap:8px;padding:18px 6px;border:1px solid var(--bd);border-radius:18px;font-size:12px;font-weight:600;transition:border-color .2s,transform .2s;background:var(--card)}
+.ct:hover,.ct.on{border-color:var(--pr);transform:translateY(-3px)}
+.ct i{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-style:normal;font-size:22px;background:var(--sf)}
+.fl{background:var(--dk);color:#fff;padding:48px 0;margin-top:56px}
+.fl .sh h2{display:flex;align-items:center;gap:12px}
+.fl .sh h2 i{width:44px;height:44px;border-radius:12px;background:var(--or);display:grid;place-items:center;font-style:normal;font-size:20px}
+#cd{display:flex;gap:8px;align-items:center;font-size:13px;color:#94a3b8}
+#cd div{background:#ffffff14;border-radius:10px;padding:6px 12px;text-align:center;min-width:52px}
+#cd b{display:block;font-size:20px;color:#fff}#cd small{font-size:9px}
+.row{display:flex;gap:16px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory}
+.row .card{min-width:240px;flex:0 0 240px;scroll-snap-align:start;color:var(--tx)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px #0000001f}
+.im{position:relative;aspect-ratio:5/4;overflow:hidden;background:var(--sf)}
+.ph{position:absolute;inset:0;display:grid;place-items:center;font-size:46px;color:var(--mut);opacity:.5}
+.im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.card:hover .im img{transform:scale(1.06)}
+.bd{position:absolute;top:10px;left:10px;background:var(--or);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px}
+.hr{position:absolute;top:8px;right:8px;width:32px;height:32px;border-radius:50%;background:#fff;color:#9ca3af;font-size:16px;display:grid;place-items:center}
+.hr.on{color:#e11d48}
+.in{padding:14px;display:flex;flex-direction:column;gap:4px;flex:1}
+.in small{color:var(--pr);font-weight:700;font-size:11px}
+.in h3{font-size:15px;font-weight:600;line-height:1.3}
+.rt{font-size:12px;color:var(--mut)}.rt b{color:var(--tx)}.rt{color:#f59e0b}.rt span{color:var(--mut)}
+.pr{display:flex;gap:8px;align-items:baseline;margin:2px 0 10px}.pr b{font-size:16px}.pr s{font-size:11px;color:var(--mut)}
+.in .btn{margin-top:auto}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;align-items:center}
+.tools button.f,.tools select{border:1px solid var(--bd);border-radius:99px;padding:7px 16px;font-size:13px;background:var(--card)}
+.tools button.on{background:var(--pr);color:#fff;border-color:var(--pr)}
+.tools select{margin-left:auto}
+.em{text-align:center;color:var(--mut);padding:40px 0;grid-column:1/-1}
+.pm{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pm>div{border-radius:22px;padding:36px;min-height:200px;display:flex;flex-direction:column;justify-content:center;gap:12px;position:relative;overflow:hidden}
+.pm .a{background:#e6eeff;color:#0a0a0a}.pm .b{background:var(--dk);color:#fff}
+.pm h3{font-size:26px;font-weight:600;line-height:1.2}
+.pm .sh2{position:absolute;right:30px;top:50%;transform:translateY(-50%) rotate(12deg);width:120px;height:170px;border:10px solid var(--or);border-radius:26px;background:#ffe1d3}
+.pm .wt{position:absolute;right:30px;top:50%;transform:translateY(-50%);width:130px;height:130px;border-radius:26px;background:#f1f5f9;color:#0a0a0a;display:grid;place-items:center;font-size:30px;font-weight:800}
+.why{background:var(--sf);padding:56px 0;margin-top:56px;text-align:center}
+.why h2{font-size:30px;font-weight:600;margin-bottom:28px}
+.wg{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.wg div{font-size:13px;color:var(--mut)}.wg b{display:block;color:var(--tx);font-size:14px}
+.wg i{display:grid;place-items:center;font-style:normal;font-size:22px;width:52px;height:52px;border-radius:14px;background:var(--card);margin:0 auto 10px;box-shadow:0 4px 14px #0000000f}
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rv blockquote{border:1px solid var(--bd);border-radius:18px;padding:20px;background:var(--card);font-size:14px;display:grid;gap:14px}
+.rv cite{font-style:normal;font-size:12px;color:var(--mut);border-top:1px solid var(--bd);padding-top:12px;display:flex;justify-content:space-between}
+.rv cite b{color:var(--tx);display:block;font-size:13px}
+.nl{margin-top:56px;background:linear-gradient(120deg,#1d4ed8,#3b82f6);color:#fff;border-radius:22px;padding:34px 40px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.nl h3{font-size:26px;font-weight:600}
+.nl form{display:flex;background:#fff;border-radius:12px;padding:5px;flex:1;max-width:460px;min-width:250px}
+.nl input{flex:1;border:0;padding:0 12px;outline:0;background:none;color:#0a0a0a;min-width:0}
+.nl .btn{width:auto}
+footer{background:var(--dk);color:#cbd5e1;margin-top:56px;padding:48px 0 24px;font-size:13px}
+.fg{display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:28px}
+.fg h4{color:#fff;margin-bottom:12px;font-size:14px}
+.fg a{display:block;padding:3px 0;color:#94a3b8;cursor:pointer}.fg a:hover{color:#fff}
+.fg .logo{color:#fff;margin-bottom:10px}
+.cp{border-top:1px solid #ffffff18;margin-top:28px;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.pay span{background:#fff;color:#0a0a0a;font-size:10px;font-weight:700;padding:3px 8px;border-radius:5px;margin-left:6px}
+.wa{position:fixed;right:18px;bottom:calc(86px + env(safe-area-inset-bottom,0px));z-index:25;background:#22c55e;color:#fff;font-weight:700;border-radius:99px;padding:12px 18px;box-shadow:0 8px 24px #0004;font-size:13px}
+.tab{position:fixed;left:0;right:0;bottom:0;z-index:35;background:var(--bg);border-top:1px solid var(--bd);display:none;justify-content:space-around;padding:8px 0 calc(8px + env(safe-area-inset-bottom,0px))}
+.tab button{display:grid;justify-items:center;font-size:11px;color:var(--mut);position:relative;padding:2px 14px}
+.tab button span.g{font-size:20px;line-height:1.2}.tab .on{color:var(--pr)}
+.ov{position:fixed;inset:0;background:#0009;z-index:50;opacity:0;visibility:hidden;transition:.25s}
+.ov.on{opacity:1;visibility:visible}
+.dr{position:fixed;top:0;right:0;bottom:0;width:min(430px,100%);background:var(--bg);z-index:60;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.dr.on{transform:none}
+.dr.l{right:auto;left:0;transform:translateX(-100%);width:min(300px,86%)}.dr.l.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--bd);font-weight:700;font-size:18px}
+.dh button{font-size:22px;padding:0 6px}
+.db{flex:1;overflow-y:auto;padding:12px 20px}
+.df{border-top:1px solid var(--bd);padding:16px 20px;display:grid;gap:8px;font-size:14px}
+.df div{display:flex;justify-content:space-between}.df .t{font-weight:800;font-size:17px}
+.ci{display:grid;grid-template-columns:64px 1fr auto;gap:12px;padding:12px 0;border-bottom:1px solid var(--bd);align-items:center;font-size:13px}
+.ci .th{position:relative;width:64px;height:64px;border-radius:12px;overflow:hidden;background:var(--sf)}.ci .th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.ci .th .ph{font-size:24px}
+.ci h4{font-size:13px;font-weight:600}.ci small{color:var(--mut)}
+.q{display:flex;align-items:center;gap:8px;margin-top:6px}
+.q button{width:26px;height:26px;border:1px solid var(--bd);border-radius:8px}
+.q .rm{width:auto;border:0;color:#e11d48;font-size:12px;margin-left:6px}
+.dr form{display:grid;gap:10px}
+.dr label{font-size:12px;font-weight:600;display:grid;gap:4px}
+.dr input,.dr select{border:1px solid var(--bd);border-radius:10px;padding:10px 12px;background:var(--sf)}
+.dr .g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ok2{text-align:center;padding:50px 10px;display:grid;gap:10px}.ok2 i{font-size:54px;font-style:normal}
+.toast{position:fixed;left:50%;bottom:calc(88px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:#111827;color:#fff;padding:10px 18px;border-radius:12px;font-size:13px;opacity:0;transition:.25s;z-index:80;pointer-events:none;max-width:90%}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1024px){.cg{grid-template-columns:repeat(5,1fr)}.wg{grid-template-columns:repeat(3,1fr)}.fg{grid-template-columns:1fr 1fr}.nav-d{display:none}}
+@media(max-width:768px){
+ .w{padding:0 14px}.hd{padding:10px 14px;gap:10px}.burger{display:block}
+ nav.cats{display:none}.sr{order:5;flex:1 1 100%}.sr select{display:none}.ic{gap:0}.ic .h{display:none}
+ .tab{display:flex}.wa{padding:12px 14px}
+ .hero{min-height:560px;border-radius:18px}
+ .sl{grid-template-columns:1fr;text-align:center;padding:28px 20px;align-content:start;gap:10px}
+ .sl p{margin:auto}.sl .art{max-width:210px;margin-top:6px}
+ .cg{grid-template-columns:repeat(3,1fr)}.pm{grid-template-columns:1fr}.pm>div{padding:26px}
+ .wg{grid-template-columns:1fr 1fr}.rv{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}.rv blockquote{min-width:82%;scroll-snap-align:start}
+ .grid{grid-template-columns:1fr 1fr;gap:10px}.in{padding:10px}.in h3{font-size:13px}
+ .nl{padding:26px 20px}.sec{padding-top:40px}
+}
+@media(max-width:380px){.fg{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+a.btn{display:inline-block;text-align:center}
+.db>a{display:block}
+.lk2{position:absolute;inset:0;display:block}
+.in h3 a:hover{color:var(--pr)}
+.brands a{flex:1;min-width:100px;padding:20px 10px;font-weight:800;border-left:1px solid var(--bd);text-align:center;white-space:nowrap}.brands a:hover{color:var(--pr)}
+.cg{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}
+a.ct{text-align:center}
+.sh select{border:1px solid var(--bd);border-radius:99px;padding:7px 16px;font-size:13px;background:var(--card)}
+#app{flex:1 0 auto}
+.sk{height:310px;border-radius:18px;background:linear-gradient(90deg,var(--sf),var(--bd),var(--sf));background-size:200% 100%;animation:sh 1.3s infinite}@keyframes sh{to{background-position:-200% 0}}
+.bc{font-size:13px;color:var(--mut);margin:20px 0;display:flex;gap:8px;flex-wrap:wrap}.bc a:hover{color:var(--pr)}
+.pd{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:start}
+.pd .im.big{aspect-ratio:1;border-radius:22px;border:1px solid var(--bd)}
+.ths{display:flex;gap:10px;margin-top:12px;overflow-x:auto}.ths button{width:72px;height:72px;border:2px solid var(--bd);border-radius:12px;overflow:hidden;flex:none}.ths img{width:100%;height:100%;object-fit:cover}
+.pd h1{font-size:clamp(26px,3vw,36px);line-height:1.15;letter-spacing:-.02em;font-weight:700;margin:6px 0 12px}
+.pp{display:flex;gap:12px;align-items:baseline;margin-bottom:14px}.pp b{font-size:30px}.pp s{color:var(--mut)}.pp span{background:var(--or);color:#fff;font-size:12px;font-weight:700;padding:3px 9px;border-radius:6px}
+.stk{font-weight:600;font-size:14px;margin-bottom:16px}.stk.in2{color:#16a34a}.stk.lo{color:#d97706}.stk.out{color:#e11d48}
+.qb{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 10px}.qb .btn{width:auto;flex:1;min-width:140px;padding:13px 18px}
+.qs{display:flex;align-items:center;border:1px solid var(--bd);border-radius:10px}.qs button{width:40px;height:44px}.qs span{min-width:36px;text-align:center;font-weight:700}
+.bx{border:1px solid var(--bd);border-radius:16px;padding:6px 16px;display:grid;margin-top:18px}.bx div{display:flex;gap:12px;align-items:center;padding:10px 0;font-size:14px}.bx div+div{border-top:1px solid var(--bd)}.bx i{font-size:20px;color:var(--pr)}
+.tb{display:flex;gap:6px;border-bottom:1px solid var(--bd);margin-top:40px;overflow-x:auto}.tb button{padding:12px 18px;font-weight:600;color:var(--mut);border-bottom:2px solid transparent;white-space:nowrap}.tb button.on{color:var(--pr);border-color:var(--pr)}
+.tp{padding:22px 0;max-width:800px;white-space:pre-line}
+.tp table{width:100%;border-collapse:collapse;white-space:normal}.tp td{padding:10px 12px;border-bottom:1px solid var(--bd);font-size:14px}.tp td:first-child{color:var(--mut);width:35%}
+.pg2 h1{font-size:clamp(28px,4vw,40px);letter-spacing:-.02em;margin-bottom:18px}
+.pc{max-width:760px;display:grid;gap:14px;color:var(--mut)}.pc h3{color:var(--tx);margin-top:8px}
+.pc details{border:1px solid var(--bd);border-radius:12px;padding:14px 16px;color:var(--tx)}.pc summary{cursor:pointer;font-weight:600}.pc details p{color:var(--mut);margin-top:8px}
+.cx{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:980px}
+.ci2{display:grid;gap:12px;align-content:start}.ci2>*{display:flex;gap:14px;align-items:center;border:1px solid var(--bd);border-radius:14px;padding:16px;color:var(--tx)}.ci2 i{font-size:22px;color:var(--pr)}.ci2 small{display:block;color:var(--mut)}
+.fm{display:grid;gap:10px}.fm label{font-size:12px;font-weight:600;display:grid;gap:4px}.fm input,.fm textarea{border:1px solid var(--bd);border-radius:10px;padding:11px 12px;background:var(--sf);font:inherit;color:inherit}
+.chips{display:flex;gap:8px;overflow-x:auto;margin-bottom:18px;padding-bottom:4px}.chips a{border:1px solid var(--bd);border-radius:99px;padding:7px 16px;font-size:13px;white-space:nowrap;background:var(--card)}.chips a.on{background:var(--pr);color:#fff;border-color:var(--pr)}
+.err{text-align:center;padding:60px 10px;color:var(--mut);display:grid;gap:10px;justify-items:center}.err i{font-size:44px}
+@media(max-width:768px){.pd,.cx{grid-template-columns:1fr;gap:20px}.qb .btn{min-width:100%}}
+@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes pop{50%{transform:scale(1.05)}}
+@keyframes bump{40%{transform:scale(1.5)}}
+#app>*{animation:up .38s ease backwards}
+.grid .card{animation:up .45s ease backwards;animation-delay:calc(var(--i,0)*35ms)}
+footer{flex-shrink:0}
+header{transition:box-shadow .25s}header.sc{box-shadow:0 6px 24px #0000001a}
+.fi{opacity:0;transition:opacity .5s ease}.fi.ld{opacity:1}
+.im img.fi{transition:opacity .5s ease,transform .4s}
+.sl .art img.fi{transition:opacity .5s ease,transform 7s ease-out}.sl.on .art img.ld{transform:scale(1.1)}
+.rvl{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.rvl.vis{opacity:1;transform:none}
+.sg{position:absolute;top:calc(100% + 8px);left:0;right:0;background:var(--card);border:1px solid var(--bd);border-radius:14px;box-shadow:0 18px 40px #0003;z-index:40;overflow:hidden;animation:up .18s ease backwards}
+.sgi{display:flex;align-items:center;gap:12px;padding:10px 14px;transition:background .15s}.sgi:hover,.sgi.on{background:var(--sf)}
+.sgt{position:relative;width:44px;height:44px;border-radius:10px;overflow:hidden;background:var(--sf);flex:none}.sgt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.sgt .ph{font-size:18px}
+.sgx{flex:1;min-width:0}.sgx b{display:block;font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sgx small{color:var(--mut);font-size:12px}
+.sgi em{font-style:normal;font-weight:700;font-size:13px;white-space:nowrap}
+.sgi mark{background:none;color:var(--pr);font-weight:800}
+.sga{display:block;padding:12px 14px;border-top:1px solid var(--bd);color:var(--pr);font-weight:600;font-size:13px}.sga:hover{background:var(--sf)}
+.btn.pop{animation:pop .35s}.cc.bump{animation:bump .4s}
+.q button,.ic button,.tab button,.chips a,.ct,.hr,.btn{transition:all .2s}
+.ic button:hover{color:var(--pr)}
+@media(min-width:769px){.wa{bottom:24px}.toast{bottom:30px}}
+@media(max-width:768px){footer{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rvl{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="top">Free delivery on orders over <b>Rs. 5,000</b> &nbsp;|&nbsp; Cash on Delivery Available</div>
+<header>
+ <div class="hd">
+  <button class="burger" data-a="menu" aria-label="Open menu"><i class="bi bi-list"></i></button>
+  <a class="logo" href="#/"><i class="bi bi-phone"></i>Z.A <em>Mobile</em></a>
+  <form class="sr" id="sf"><select id="hc" aria-label="Category"></select><input id="q" type="search" placeholder="Search phones, earbuds, accessories…" aria-label="Search"><button aria-label="Search"><i class="bi bi-search"></i></button><div class="sg" id="sg" hidden></div></form>
+  <div class="ic">
+   <button class="h" data-a="go" data-v="#/wishlist"><span class="g"><i class="bi bi-heart"></i></span>Wishlist<b class="cc" id="wc" hidden>0</b></button>
+   <button data-a="cart"><span class="g"><i class="bi bi-cart3"></i></span><span class="h2">Cart</span><b class="cc" hidden>0</b></button>
+   <button class="h" data-a="acct"><span class="g"><i class="bi bi-person"></i></span>Account</button>
+  </div>
+ </div>
+ <nav class="cats w" id="nav"></nav>
+</header>
+
+<main id="app"></main>
+
+<footer><div class="w">
+ <div class="fg">
+  <div><a class="logo" href="#/"><i class="bi bi-phone"></i>Z.A <em>Mobile</em></a><p style="color:#94a3b8;max-width:260px">Pakistan’s trusted destination for original smartphones and accessories at honest prices.</p></div>
+  <div><h4>Quick links</h4><a href="#/about">About us</a><a href="#/contact">Contact</a><a href="#/track">Track order</a><a href="#/faq">FAQs</a></div>
+  <div><h4>Categories</h4><span id="fc"></span></div>
+  <div><h4>Customer care</h4><a href="#/shipping">Shipping info</a><a href="#/returns">Returns</a><a href="#/warranty">Warranty</a><a href="#/privacy">Privacy policy</a></div>
+  <div><h4>Get in touch</h4><a id="fp" href="tel:03054070441">03054070441</a><a id="fa" href="#/contact">Lahore</a></div>
+ </div>
+ <div class="cp"><span>© 2026 Z.A Mobile. All rights reserved.</span><span class="pay"><span>JazzCash</span><span>Easypaisa</span><span>VISA</span><span>COD</span></span></div>
+</div></footer>
+
+<a class="wa" id="waf" href="https://wa.me/923054070441" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i>&nbsp; Chat with us</a>
+
+<div class="tab">
+ <button class="on" data-a="go" data-v="#/"><span class="g"><i class="bi bi-house"></i></span>Home</button>
+ <button data-a="go" data-v="#/shop"><span class="g"><i class="bi bi-grid"></i></span>Shop</button>
+ <button data-a="cart" style="position:relative"><span class="g"><i class="bi bi-cart3"></i></span>Cart<b class="cc" hidden>0</b></button>
+ <button data-a="go" data-v="#/wishlist"><span class="g"><i class="bi bi-heart"></i></span>Wishlist</button>
+</div>
+
+<div class="ov" id="ov" data-a="close"></div>
+<aside class="dr l" id="menu" aria-label="Menu"><div class="dh">Menu<button data-a="close" aria-label="Close"><i class="bi bi-x-lg"></i></button></div><div class="db" id="ml"></div></aside>
+<aside class="dr" id="cart" aria-label="Cart">
+ <div class="dh">Your cart<button data-a="close" aria-label="Close"><i class="bi bi-x-lg"></i></button></div>
+ <div id="cv" style="display:contents">
+  <div class="db" id="items"></div>
+  <div class="df"><div><span>Subtotal</span><span id="sub"></span></div><div><span>Delivery</span><span id="ship"></span></div><div class="t"><span>Total</span><span id="tot"></span></div>
+   <button class="btn" id="go" data-a="co">Checkout</button></div>
+ </div>
+ <div id="cov" class="db" hidden>
+  <form id="of">
+   <label>Full name<input name="n" required autocomplete="name"></label>
+   <div class="g2"><label>Phone<input name="p" type="tel" required autocomplete="tel" placeholder="03XX XXXXXXX"></label><label>City<input name="c" required autocomplete="address-level2"></label></div>
+   <label>Delivery address<input name="a" required autocomplete="street-address"></label>
+   <label>Email (optional)<input name="e" type="email" autocomplete="email"></label>
+   <label>Notes (optional)<input name="x"></label>
+   <label>Payment<select name="m"><option value="cod">Cash on Delivery</option></select></label><input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+   <button class="btn ok"><i class="bi bi-bag-check"></i> Place order</button><button type="button" class="btn" style="background:var(--sf);color:var(--tx)" data-a="bk">Back to cart</button>
+  </form>
+ </div>
+ <div id="dn" class="db" hidden></div>
+</aside>
+<div class="toast" id="ts" role="status"></div>
+
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import {getFirestore,doc,getDoc,getDocs,collection,query,where,limit,addDoc,serverTimestamp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+
+/* ===== 1. Paste your Firebase web config (Firebase console > Project settings > Your apps) ===== */
+const firebaseConfig = {
+  apiKey: "AIzaSyCjQhAhLOA9rh-RBIEtdAwmf6FZwgroSB8",
+  authDomain: "microstore-3451d.firebaseapp.com",
+  projectId: "microstore-3451d",
+  storageBucket: "microstore-3451d.firebasestorage.app",
+  messagingSenderId: "771541516085",
+  appId: "1:771541516085:web:fb83204a3685428748967c",
+  measurementId: "G-D101GD83D4"
+};
+/* ===== 2. Your shop document: Shops/{SHOP_ID}/products ===== */
+const SHOP_ID="KGz64Ln2FuqYJd1ssVdb",SHOP_NAME="Z/A mobile shop";
+/* Website orders are saved to Shops/{SHOP_ID}/{ORDERS_COL}. Change the name here if your POS reads a different collection (e.g. "Orders"). */
+const ORDERS_COL="orders";
+const SHIP_FEE=250,FREE_OVER=5000; /* set SHIP_FEE to 0 for free shipping on every order */
+
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const enc=encodeURIComponent,fmt=n=>"Rs. "+Math.round(n).toLocaleString("en-US");
+const S={phone:"03054070441",address:"Peer Naseer New Graveyard",city:"Lahore",currency:"PKR",name:"Z/A mobile shop"};
+const wa=()=>"92"+S.phone.replace(/\D/g,"").replace(/^0/,"");
+const U=(id,w)=>`https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+const PHI={phone:"photo-1511707171634-5f897ff02aa9",earbuds:"photo-1600294037681-c80b4cb5b434",plug:"photo-1583863788434-e58a36330cf0","usb-c":"photo-1588872657578-7efd1f1555ed","battery-charging":"photo-1609091839311-d5365f9ff1c5","shield-check":"photo-1601784551446-20c9e07cdbdb",layers:"photo-1585060544812-6b45742d762f",smartwatch:"photo-1523275335684-37898b6baf30",speaker:"photo-1608043152269-423dbba4e7e1"};
+const KW=[["earbud|airpod|buds|headphone|handsfree","earbuds"],["charger|adapter","plug"],["cable","usb-c"],["power ?bank","battery-charging"],["case|cover","shield-check"],["protector|glass|guard","layers"],["watch","smartwatch"],["speaker","speaker"],["phone|mobile","phone"]];
+const icon=s=>{s=String(s).toLowerCase();for(const[k,v]of KW)if(new RegExp(k).test(s))return v;return"tag"};
+const find=q=>{const w=q.toLowerCase().split(/\s+/).filter(Boolean);return P.filter(p=>{const h=(p.n+" "+p.br+" "+p.cat).toLowerCase();return w.every(x=>h.includes(x))})};
+const slug=s=>String(s).toLowerCase().trim().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"other";
+
+/* ===== Map a Firestore product document to the shape the site uses. Edit the field names here if yours differ. ===== */
+const pick=(o,...k)=>{for(const x of k)if(o[x]!=null&&o[x]!=="")return o[x]};
+const num=x=>+String(x??"").replace(/[^\d.]/g,"")||0;
+function norm(id,d){
+ if(d.active===false||d.isActive===false||d.hidden===true||d.deleted===true)return;
+ const p=num(pick(d,"price","salePrice","sellingPrice","retailPrice")),o=num(pick(d,"originalPrice","oldPrice","mrp","comparePrice"));
+ let c=pick(d,"category","categoryName","type")||"Other";if(typeof c=="object")c=c.name||c.title||"Other";c=String(c);
+ const im=[].concat(pick(d,"productImage","imageUrl","image","imgUrl","photoURL","thumbnail")||[],pick(d,"productImages","images","imageUrls","photos")||[]).map(x=>typeof x=="string"?x:x&&x.url).filter(Boolean);
+ const st=pick(d,"stock","quantity","qty"),n=String(pick(d,"name","title","productName")||"Untitled");
+ const ic=icon(c)!="tag"?icon(c):icon(n);
+ return{id,n,bc:String(pick(d,"barcode")||""),br:String(pick(d,"brand","company")||""),cat:c,cs:slug(c),ic,p,o:o>p?o:0,st:st==null?null:num(st),desc:String(pick(d,"description","details","about")||""),sp:pick(d,"specs","specifications")||null,r:num(pick(d,"rating")),im:[...new Set(im)],t:d.createdAt?.seconds||Date.parse(d.createdAt)/1000||0}}
+
+let DB,SREF,P=[],CATS=[],BRS=[],ST=0,EM="",cart={},wish=[],sort="new",timer,tot=0;
+try{cart=JSON.parse(localStorage.getItem("za_cart")||"{}");wish=JSON.parse(localStorage.getItem("za_wish")||"[]")}catch(e){}
+const save=()=>{try{localStorage.setItem("za_cart",JSON.stringify(cart));localStorage.setItem("za_wish",JSON.stringify(wish))}catch(e){}};
+
+async function load(){
+ try{const db=DB=getFirestore(initializeApp(firebaseConfig));let s=await getDoc(doc(db,"Shops",SHOP_ID));
+  if(!s.exists()){const q=await getDocs(query(collection(db,"Shops"),where("Name","==",SHOP_NAME),limit(1)));if(q.empty)throw Error("Shop document not found in Firestore.");s=q.docs[0]}
+  const d=s.data();SREF=s.ref;["phone","address","city","currency"].forEach(k=>{if(d[k])S[k]=d[k]});S.name=d.Name||d.name||S.name;
+  P=(await getDocs(collection(s.ref,"products"))).docs.map(x=>norm(x.id,x.data())).filter(Boolean);
+  const m=new Map();P.forEach(p=>{const c=m.get(p.cs)||{s:p.cs,n:p.cat,c:0,ic:icon(p.cat)};c.c++;m.set(p.cs,c)});
+  CATS=[...m.values()].sort((a,b)=>b.c-a.c);
+  const b=new Map();P.forEach(p=>p.br&&b.set(p.br,(b.get(p.br)||0)+1));BRS=[...b].sort((x,y)=>y[1]-x[1]).map(x=>x[0]);
+  ST=1}catch(e){console.error(e);ST=2;EM=e.message}
+ setShell();route()}
+
+/* ===== UI pieces ===== */
+const img=p=>`<i class="bi bi-${p.ic} ph"></i><img class="fi" onload="this.classList.add('ld')" loading="lazy" src="${esc(p.im[0]||U(PHI[p.ic]||PHI.phone,600))}" alt="${esc(p.n)}" onerror="this.remove()">`;
+const bdg=p=>p.st===0?"SOLD OUT":p.o?Math.round((1-p.p/p.o)*100)+"% OFF":"";
+const card=(p,i=0)=>`<article class="card" style="--i:${Math.min(i,10)}"><div class="im"><a class="lk2" href="#/product/${enc(p.id)}" aria-label="${esc(p.n)}">${img(p)}</a>${bdg(p)?`<span class="bd">${bdg(p)}</span>`:""}<button class="hr ${wish.includes(p.id)?"on":""}" data-a="wish" data-id="${esc(p.id)}" aria-label="Add to wishlist"><i class="bi bi-heart-fill"></i></button></div><div class="in"><small>${esc(p.br||p.cat)}</small><h3><a href="#/product/${enc(p.id)}">${esc(p.n)}</a></h3>${p.r?`<div class="rt"><i class="bi bi-star-fill"></i> <b>${p.r}</b></div>`:""}<div class="pr"><b>${fmt(p.p)}</b>${p.o?`<s>${fmt(p.o)}</s>`:""}</div><button class="btn" data-a="add" data-id="${esc(p.id)}" ${p.st===0?"disabled":""}>${p.st===0?"Out of stock":"Add to cart"}</button></div></article>`;
+const grid=(l,m)=>l.length?`<div class="grid">${l.map(card).join("")}</div>`:`<p class="em">${m||"No products found."}</p>`;
+const W=h=>`<div class="w">${h}</div>`;
+const gate=f=>ST==0?W(`<div class="sec"><div class="grid">${'<div class="sk"></div>'.repeat(8)}</div></div>`):ST==2?W(`<div class="err sec"><i class="bi bi-wifi-off"></i><h2>Couldn’t load products</h2><p>${esc(EM)}</p><p>Check <code>firebaseConfig</code> in the script and that your Firestore rules allow public reads of the shop’s products.</p></div>`):f();
+const pg=(t,b)=>W(`<section class="sec pg2"><nav class="bc"><a href="#/">Home</a><span>/</span><span>${esc(t)}</span></nav><h1>${esc(t)}</h1><div class="pc">${b}</div></section>`);
+const catLink=k=>{const c=CATS.find(c=>new RegExp(k,"i").test(c.n));return c?"#/category/"+c.s:"#/shop"};
+const specs=s=>!s?"":Array.isArray(s)?`<table>${s.map(x=>typeof x=="object"?`<tr><td>${esc(x.name||x.key||x.label)}</td><td>${esc(x.value)}</td></tr>`:`<tr><td colspan="2">${esc(x)}</td></tr>`).join("")}</table>`:typeof s=="object"?`<table>${Object.entries(s).map(([k,v])=>`<tr><td>${esc(k)}</td><td>${esc(v)}</td></tr>`).join("")}</table>`:esc(s);
+
+/* ===== Pages ===== */
+const V={
+home:()=>gate(()=>{
+ const nw=[...P].sort((a,b)=>b.t-a.t),sl=nw.slice(0,3);
+ const slides=sl.length?sl.map((p,k)=>`<div class="sl ${k?"":"on"}"><div><small>NEW ARRIVAL</small><h1>${esc(p.n)}</h1><p>${esc([p.br,p.cat].filter(Boolean).join(" · "))}</p><div class="pz">Price</div><div class="pv">${fmt(p.p)}</div><a class="btn w2" href="#/product/${enc(p.id)}">View product</a></div><div class="art">${img(p)}</div></div>`).join(""):`<div class="sl on"><div><small>WELCOME</small><h1>Original phones and accessories.</h1><p>Shop the latest mobiles and accessories at honest prices.</p><a class="btn w2" href="#/shop">Shop now</a></div><div class="art"><i class="bi bi-phone ph"></i></div></div>`;
+ return W(`<section class="hero" id="hero">${slides}</section>${sl.length>1?`<div class="dots">${sl.map((_,k)=>`<button class="${k?"":"on"}" data-a="sl" data-v="${k}" aria-label="Slide ${k+1}"></button>`).join("")}</div>`:'<div style="height:20px"></div>'}
+ ${BRS.length?`<div class="brands"><span>SHOP BY BRAND</span>${BRS.slice(0,8).map(b=>`<a href="#/brand/${enc(b)}">${esc(b)}</a>`).join("")}</div>`:""}
+ <section class="sec"><div class="sh"><div><small>Find your perfect match</small><h2>Shop by category</h2></div><a href="#/shop">View all</a></div><div class="cg">${CATS.map(c=>`<a class="ct" href="#/category/${c.s}"><i class="bi bi-${c.ic}"></i>${esc(c.n)}</a>`).join("")}</div></section>
+ <section class="sec"><div class="sh"><div><small>Just in</small><h2>New arrivals</h2></div><a href="#/shop">View all</a></div>${grid(nw.slice(0,8))}</section>
+ <section class="sec"><div class="pm">
+  <div class="a"><span style="color:var(--pr);font-weight:700;font-size:12px">Style your phone</span><h3>Premium cases<br>and covers</h3><div><a class="btn w2" href="${catLink("case|cover")}" style="border:1px solid #cfd8ee">Shop cases</a></div><span class="sh2"></span></div>
+  <div class="b"><span style="color:#8fb0ff;font-weight:700;font-size:12px">Power up, worry-free</span><h3>Original chargers.<br>Warranty included.</h3><div><a class="btn or" href="${catLink("charger")}">Shop chargers</a></div><span class="wt">30W</span></div>
+ </div></section>`)+`<section class="why"><div class="w"><h2>Shop with complete confidence</h2><div class="wg"><div><i class="bi bi-shield-check"></i><b>100% original</b>Authentic products, guaranteed</div><div><i class="bi bi-patch-check"></i><b>Official warranty</b>Local and international warranty</div><div><i class="bi bi-truck"></i><b>Fast delivery</b>2–4 days across Pakistan</div><div><i class="bi bi-arrow-counterclockwise"></i><b>Easy returns</b>7-day hassle-free returns</div><div><i class="bi bi-headset"></i><b>Always here</b>Support whenever you need it</div></div></div></section>`+W(`<div class="nl"><div><h3>Be first to know.</h3><small>New drops, price alerts and members-only deals.</small></div><form id="nf"><input type="email" required placeholder="Enter your email" aria-label="Email"><button class="btn">Subscribe</button></form></div>`)}),
+
+shop:(k,v)=>gate(()=>{
+ let l=[...P],t="All products";
+ if(k=="category"){l=P.filter(p=>p.cs==v);t=(CATS.find(c=>c.s==v)||{n:"Category"}).n}
+ else if(k=="brand"){l=P.filter(p=>p.br==v);t=v}
+ else if(k=="search"){l=find(v);t="Results for “"+v+"”"}
+ else if(k=="wishlist"){l=P.filter(p=>wish.includes(p.id));t="Your wishlist"}
+ l.sort({new:(a,b)=>b.t-a.t,lo:(a,b)=>a.p-b.p,hi:(a,b)=>b.p-a.p,az:(a,b)=>a.n.localeCompare(b.n)}[sort]);
+ const chips=k=="wishlist"?"":`<div class="chips"><a href="#/shop" class="${k=="shop"?"on":""}">All</a>${CATS.map(c=>`<a href="#/category/${c.s}" class="${k=="category"&&v==c.s?"on":""}">${esc(c.n)}</a>`).join("")}</div>`;
+ const o=[["new","Newest"],["lo","Price: low to high"],["hi","Price: high to low"],["az","Name: A to Z"]].map(x=>`<option value="${x[0]}" ${sort==x[0]?"selected":""}>${x[1]}</option>`).join("");
+ return W(`<section class="sec"><div class="sh"><div><small>${l.length} items</small><h2>${esc(t)}</h2></div><select id="so" aria-label="Sort">${o}</select></div>${chips}${grid(l,k=="wishlist"?"Your wishlist is empty. Tap the heart on any product to save it.":"")}</section>`)}),
+
+product:id=>gate(()=>{
+ const p=P.find(x=>x.id==id);if(!p)return V.nf();document.title=p.n+" – Z.A Mobile";
+ const rel=P.filter(x=>x.cs==p.cs&&x.id!=p.id).slice(0,4),out=p.st===0,lo=p.st>0&&p.st<=5,d=out?"disabled":"";
+ const th=p.im.length>1?`<div class="ths">${p.im.map(u=>`<button data-a="ti" data-v="${esc(u)}" aria-label="Show image"><img src="${esc(u)}" alt=""></button>`).join("")}</div>`:"";
+ const msg=enc(`Hi Z.A Mobile, I want to order: ${p.n} – ${fmt(p.p)}\n${location.href}`);
+ return W(`<nav class="bc"><a href="#/">Home</a><span>/</span><a href="#/category/${p.cs}">${esc(p.cat)}</a><span>/</span><span>${esc(p.n)}</span></nav>
+ <div class="pd"><div><div class="im big"><i class="bi bi-${p.ic} ph"></i><img id="mi" class="fi" onload="this.classList.add('ld')" src="${esc(p.im[0]||U(PHI[p.ic]||PHI.phone,900))}" alt="${esc(p.n)}"></div>${th}</div>
+ <div><small style="color:var(--pr);font-weight:700">${esc(p.br||p.cat)}</small><h1>${esc(p.n)}</h1>
+ <div class="pp"><b>${fmt(p.p)}</b>${p.o?`<s>${fmt(p.o)}</s><span>${bdg(p)}</span>`:""}</div>
+ <div class="stk ${out?"out":lo?"lo":"in2"}">${out?"Out of stock":lo?"Only "+p.st+" left":"In stock"}</div>
+ <div class="qb"><div class="qs"><button data-a="qm" aria-label="Less"><i class="bi bi-dash"></i></button><span id="qt">1</span><button data-a="qp" aria-label="More"><i class="bi bi-plus"></i></button></div><button class="btn" data-a="addq" data-id="${esc(p.id)}" ${d}><i class="bi bi-cart-plus"></i> Add to cart</button><button class="btn or" data-a="buy" data-id="${esc(p.id)}" ${d}>Buy now</button></div>
+ <a class="btn ok" style="display:block" href="https://wa.me/${wa()}?text=${msg}" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Order on WhatsApp</a>
+ <div class="bx"><div><i class="bi bi-truck"></i>Delivery in 2–4 days across Pakistan</div><div><i class="bi bi-shield-check"></i>100% original with warranty</div><div><i class="bi bi-cash-coin"></i>Cash on delivery available</div></div></div></div>
+ <div class="tb"><button class="on" data-a="tab" data-v="0">Description</button><button data-a="tab" data-v="1">Specifications</button><button data-a="tab" data-v="2">Delivery and returns</button></div>
+ <div class="tp">${p.desc?esc(p.desc):"No description added yet."}</div><div class="tp" hidden>${specs(p.sp)||"No specifications added yet."}</div><div class="tp" hidden>Delivery takes 2–4 days across Pakistan. Free delivery on orders over Rs. 5,000, otherwise Rs. 250. Returns are accepted within 7 days if the item is unused and in its original packaging.</div>
+ ${rel.length?`<section class="sec"><div class="sh"><h2>You may also like</h2></div>${grid(rel)}</section>`:""}`)}),
+
+about:()=>pg("About us",`<p>Z.A Mobile is a mobile phone and accessories shop in ${esc(S.city)}, Pakistan. We sell original smartphones, earbuds, chargers, cables, cases and more at honest prices.</p><h3>What we stand for</h3><p>Original products, clear prices and real support. Not sure what to buy? Message us on WhatsApp and we’ll help you choose.</p><p><a class="btn" href="#/shop" style="width:auto">Browse products</a></p>`),
+contact:()=>W(`<section class="sec pg2"><nav class="bc"><a href="#/">Home</a><span>/</span><span>Contact</span></nav><h1>Contact us</h1><div class="cx"><div class="ci2"><a href="tel:${esc(S.phone)}"><i class="bi bi-telephone"></i><span><small>Call us</small>${esc(S.phone)}</span></a><a href="https://wa.me/${wa()}" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i><span><small>WhatsApp</small>Chat with us</span></a><a href="https://www.google.com/maps/search/?api=1&query=${enc(S.address+" "+S.city)}" target="_blank" rel="noopener"><i class="bi bi-geo-alt"></i><span><small>Visit the shop</small>${esc(S.address)}, ${esc(S.city)}</span></a></div>
+ <form class="fm" id="cf"><label>Your name<input name="n" required></label><label>Phone<input name="p" type="tel" required></label><label>Message<textarea name="m" rows="4" required></textarea></label><button class="btn"><i class="bi bi-whatsapp"></i> Send on WhatsApp</button></form></div></section>`),
+shipping:()=>pg("Shipping info",`<p>We deliver across Pakistan in 2–4 working days.</p><p>Delivery is free on orders over Rs. 5,000. Orders below that pay a flat Rs. 250.</p><p>Payment is cash on delivery.</p>`),
+returns:()=>pg("Returns",`<p>You can return an item within 7 days of delivery if it is unused and in its original packaging.</p><p>To start a return, message us on WhatsApp with your order details.</p>`),
+warranty:()=>pg("Warranty",`<p>Phones and accessories come with the manufacturer’s or shop warranty stated on the product.</p><p>Keep your invoice. Warranty does not cover physical or water damage.</p>`),
+privacy:()=>pg("Privacy policy",`<p>We only use the details you send us (name, phone, address) to process and deliver your order.</p><p>Your order is sent to the shop so we can confirm and deliver it. This site does not store card or payment details.</p>`),
+track:()=>pg("Track order",`<p>Enter your order details and we’ll reply on WhatsApp with an update.</p><form class="fm" id="tf" style="max-width:420px"><label>Order number<input name="o" required></label><label>Phone<input name="p" type="tel" required></label><button class="btn"><i class="bi bi-whatsapp"></i> Ask for an update</button></form>`),
+faq:()=>pg("FAQs",`<details><summary>How long does delivery take?</summary><p>2–4 working days across Pakistan.</p></details><details><summary>Are your products original?</summary><p>Yes. Every product is original and comes with warranty.</p></details><details><summary>Can I pay on delivery?</summary><p>Yes, cash on delivery is available.</p></details><details><summary>Can I return a product?</summary><p>Yes, within 7 days if it is unused and in its original packaging.</p></details>`),
+nf:()=>W(`<div class="err sec"><i class="bi bi-search"></i><h2>Page not found</h2><a class="btn" href="#/" style="width:auto">Back to home</a></div>`)
+};
+
+/* ===== Router ===== */
+function route(keep){
+ const[a="",b=""]=location.hash.replace(/^#\/?/,"").split("/").map(decodeURIComponent);
+ const sh=["shop","category","brand","search","wishlist"];document.title="Z.A Mobile – Phones & Accessories";
+ $("#app").innerHTML=a==""?V.home():sh.includes(a)?V.shop(a,b):Object.hasOwn(V,a)?V[a](b):V.nf();
+ if(!keep)scrollTo({top:0,behavior:"instant"});closeD();hearts();$("#sg").hidden=true;if(a=="search")$("#q").value=b;$$("#app .sec,#app .why,#app .nl").forEach(e=>{if(e.getBoundingClientRect().top>innerHeight*.9){e.classList.add("rvl");io.observe(e)}});
+ clearInterval(timer);const n=$$(".sl").length;if(n>1){let i=0;timer=setInterval(()=>{i=(i+1)%n;slide(i)},5500)}
+ const t={"":0,shop:1,category:1,brand:1,search:1,wishlist:3}[a];$$(".tab button").forEach((x,i)=>x.classList.toggle("on",i==t))}
+addEventListener("hashchange",()=>route());
+function slide(i){$$(".sl").forEach((s,k)=>s.classList.toggle("on",k==i));$$(".dots button").forEach((d,k)=>d.classList.toggle("on",k==i))}
+function setShell(){
+ $("#hc").innerHTML='<option value="">All categories</option>'+CATS.map(c=>`<option value="${c.s}">${esc(c.n)}</option>`).join("");
+ $("#nav").innerHTML='<a href="#/shop" style="color:var(--pr);font-weight:700"><i class="bi bi-list"></i> All categories</a>'+CATS.slice(0,6).map(c=>`<a href="#/category/${c.s}">${esc(c.n)}</a>`).join("");
+ $("#ml").innerHTML='<a href="#/" style="color:var(--tx);padding:10px 0;font-weight:700">Home</a><a href="#/shop" style="color:var(--tx);padding:10px 0;font-weight:700">All products</a>'+CATS.map(c=>`<a href="#/category/${c.s}" style="color:var(--tx);padding:10px 0"><i class="bi bi-${c.ic}"></i> ${esc(c.n)}</a>`).join("")+'<a href="#/about" style="color:var(--tx);padding:10px 0">About us</a><a href="#/contact" style="color:var(--tx);padding:10px 0">Contact</a>';
+ $("#fc").innerHTML=CATS.slice(0,4).map(c=>`<a href="#/category/${c.s}">${esc(c.n)}</a>`).join("");
+ $("#fp").textContent=S.phone;$("#fp").href="tel:"+S.phone;$("#fa").textContent=S.address+", "+S.city;$("#waf").href="https://wa.me/"+wa();rc()}
+
+/* ===== Cart, wishlist, drawers ===== */
+function toast(m){const t=$("#ts");t.textContent=m;t.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove("on"),1800)}
+function hearts(){$$("[data-a=wish]").forEach(b=>b.classList.toggle("on",wish.includes(b.dataset.id)));const n=wish.length;$("#wc").textContent=n;$("#wc").hidden=!n}
+function rc(){
+ if(ST==1)Object.keys(cart).forEach(id=>{if(!P.find(x=>x.id==id))delete cart[id]});
+ let sub=0,n=0;const ids=Object.keys(cart).filter(id=>P.find(x=>x.id==id));
+ $("#items").innerHTML=ids.length?ids.map(id=>{const p=P.find(x=>x.id==id),q=cart[id];sub+=p.p*q;n+=q;return `<div class="ci"><div class="th">${img(p)}</div><div><h4><a href="#/product/${enc(id)}">${esc(p.n)}</a></h4><small>${fmt(p.p)}</small><div class="q"><button data-a="dec" data-id="${esc(id)}" aria-label="Decrease"><i class="bi bi-dash"></i></button><span>${q}</span><button data-a="inc" data-id="${esc(id)}" aria-label="Increase"><i class="bi bi-plus"></i></button><button class="rm" data-a="rm" data-id="${esc(id)}">Remove</button></div></div><b>${fmt(p.p*q)}</b></div>`}).join(""):'<p class="em">Your cart is empty. Add a phone or accessory to get started.</p>';
+ const ship=!sub||sub>=FREE_OVER?0:SHIP_FEE;tot=sub+ship;$("#sub").textContent=fmt(sub);$("#ship").textContent=ship?fmt(ship):"Free";$("#tot").textContent=fmt(tot);
+ $$(".cc:not(#wc)").forEach(e=>{e.textContent=n;e.hidden=!n;if(n>lastN){e.classList.remove("bump");void e.offsetWidth;e.classList.add("bump")}});lastN=n;$("#go").disabled=!n;save()}
+function openD(id){$("#ov").classList.add("on");$("#"+id).classList.add("on")}
+function closeD(){$$(".dr").forEach(d=>d.classList.remove("on"));$("#ov").classList.remove("on")}
+function view(v){$("#cv").hidden=v!="cv";$("#cov").hidden=v!="cov";$("#dn").hidden=v!="dn"}
+const E=m=>Object.assign(Error(m),{user:1});
+const orderNo=()=>"MS-"+Date.now().toString(36).toUpperCase().slice(-5)+Math.random().toString(36).toUpperCase().slice(2,5);
+const sendWA=t=>window.open("https://wa.me/"+wa()+"?text="+enc(t),"_blank");
+
+document.addEventListener("click",e=>{
+ if(e.target.closest(".dr a"))closeD();
+ const b=e.target.closest("[data-a]");if(!b)return;
+ const a=b.dataset.a,id=b.dataset.id,v=b.dataset.v,p=P.find(x=>x.id==id);
+ const add=n=>{if(!p)return false;const q=(cart[id]||0)+n;if(p.st>0&&q>p.st){toast("Only "+p.st+" in stock");return false}cart[id]=q;rc();return true};
+ if(a=="add"){if(add(1)){toast(p.n+" added to cart");fl(b)}}
+ else if(a=="addq"){if(add(+$("#qt").textContent)){toast("Added to cart");fl(b)}}
+ else if(a=="buy"){if(add(+$("#qt").textContent)){view("cov");openD("cart")}}
+ else if(a=="inc")add(1);
+ else if(a=="dec"){cart[id]>1?cart[id]--:delete cart[id];rc()}
+ else if(a=="rm"){delete cart[id];rc()}
+ else if(a=="wish"){const i=wish.indexOf(id);if(i<0){wish.push(id);toast("Saved to wishlist")}else wish.splice(i,1);save();hearts();if(location.hash=="#/wishlist")route(1)}
+ else if(a=="cart"){view("cv");openD("cart")}
+ else if(a=="menu")openD("menu");
+ else if(a=="close")closeD();
+ else if(a=="go")location.hash=v;
+ else if(a=="acct")toast("Sign in is coming soon");
+ else if(a=="co")view("cov");
+ else if(a=="bk")view("cv");
+ else if(a=="ti"){const m=$("#mi");if(m){m.classList.remove("ld");m.src=v}}
+ else if(a=="tab"){$$(".tp").forEach((x,i)=>x.hidden=i!=+v);$$(".tb button").forEach((x,i)=>x.classList.toggle("on",i==+v))}
+ else if(a=="qm")$("#qt").textContent=Math.max(1,+$("#qt").textContent-1);
+ else if(a=="qp")$("#qt").textContent=+$("#qt").textContent+1;
+ else if(a=="sl")slide(+v)});
+document.addEventListener("change",e=>{
+ if(e.target.id=="so"){sort=e.target.value;route(1)}
+ if(e.target.id=="hc")location.hash=e.target.value?"#/category/"+e.target.value:"#/shop"});
+document.addEventListener("submit",async e=>{
+ e.preventDefault();const f=e.target,d=Object.fromEntries(new FormData(f));
+ if(f.id=="sf"){$("#sg").hidden=true;const q=$("#q").value.trim();if(q)location.hash="#/search/"+enc(q)}
+ else if(f.id=="nf"){f.reset();toast("Subscribed. Watch your inbox for deals.")}
+ else if(f.id=="cf"){sendWA(`Hi Z.A Mobile, I’m ${d.n} (${d.p}).\n${d.m}`);f.reset()}
+ else if(f.id=="tf"){sendWA(`Hi Z.A Mobile, please update me on order ${d.o}. My phone: ${d.p}`)}
+ else if(f.id=="of"){
+  if(d.website)return;
+  const cl=(v,m)=>String(v??"").trim().slice(0,m),c={name:cl(d.n,80),phone:cl(d.p,20),email:cl(d.e,100),city:cl(d.c,60),address:cl(d.a,300),notes:cl(d.x,300)};
+  if(c.name.length<2)return toast("Please enter your full name.");
+  if(!/^[0-9+\s-]{10,15}$/.test(c.phone))return toast("Please enter a valid phone number.");
+  if(c.email&&!/^\S+@\S+\.\S+$/.test(c.email))return toast("Please enter a valid email address.");
+  if(c.city.length<2)return toast("Please enter your city.");
+  if(c.address.length<8)return toast("Please enter your full delivery address.");
+  const ids=Object.keys(cart).filter(k=>P.find(x=>x.id==k));if(!ids.length||!SREF)return;
+  const btn=f.querySelector(".btn.ok"),h=btn.innerHTML;btn.disabled=true;btn.textContent="Placing order…";
+  let msg="";
+  try{
+   const items=[];
+   for(const k of ids){
+    const q=Math.min(20,cart[k]),sn=await getDoc(doc(SREF,"products",k)),p=sn.exists()?norm(sn.id,sn.data()):null;
+    if(!p)throw E("One of the items is no longer available. Please check your cart.");
+    if(p.st!=null&&p.st<q)throw E(`Only ${p.st} of “${p.n}” left in stock.`);
+    items.push({productId:p.id,name:p.n,price:p.p,qty:q,lineTotal:p.p*q,image:/^https?:/.test(p.im[0]||"")?p.im[0]:""})}
+   const subtotal=items.reduce((a,x)=>a+x.lineTotal,0),shipping=subtotal>=FREE_OVER?0:SHIP_FEE,total=subtotal+shipping,no=orderNo();
+   msg=`New order ${no}\n${items.map(x=>`${x.qty} x ${x.name} – ${fmt(x.lineTotal)}`).join("\n")}\nTotal: ${fmt(total)}\n\nName: ${c.name}\nPhone: ${c.phone}\nCity: ${c.city}\nAddress: ${c.address}`;
+   await addDoc(collection(SREF,ORDERS_COL),{orderNumber:no,checkoutId:no,source:"website",status:"new",paymentMethod:"cod",paymentStatus:"unpaid",customer:c,items,itemCount:items.reduce((a,x)=>a+x.qty,0),subtotal,shipping,total,currency:S.currency,shopId:SREF.id,shopName:S.name,userId:null,createdAt:serverTimestamp()});
+   cart={};rc();f.reset();
+   $("#dn").innerHTML=`<div class="ok2"><i class="bi bi-check-circle-fill" style="color:#16a34a"></i><h3>Order placed</h3><p>Thanks, ${esc(c.name)}. Your order number is <b>${no}</b>. We’ll call ${esc(c.phone)} to confirm it.</p><a class="btn ok" href="https://wa.me/${wa()}?text=${enc(msg)}" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Message us on WhatsApp</a><button class="btn" data-a="close">Continue shopping</button></div>`;view("dn")
+  }catch(err){console.error(err);
+   $("#dn").innerHTML=`<div class="ok2"><i class="bi bi-exclamation-circle" style="color:#e11d48"></i><h3>Couldn’t place the order</h3><p>${esc(err.user?err.message:"Something went wrong. Please try again.")}</p>${msg&&!err.user?`<a class="btn ok" href="https://wa.me/${wa()}?text=${enc(msg)}" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Send on WhatsApp instead</a>`:""}<button class="btn" data-a="bk">Back to cart</button></div>`;view("dn")}
+  btn.disabled=false;btn.innerHTML=h}});
+document.addEventListener("keydown",e=>{if(e.key=="Escape")closeD()});
+
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("vis");io.unobserve(x.target)}}),{threshold:.08});
+let lastN=0,sgT,sgI=-1;
+function fl(b){if(b.dataset.h)return;b.dataset.h=b.innerHTML;b.innerHTML='<i class="bi bi-check2"></i> Added';b.classList.add("pop");setTimeout(()=>{b.innerHTML=b.dataset.h;delete b.dataset.h;b.classList.remove("pop")},1000)}
+addEventListener("scroll",()=>$("header").classList.toggle("sc",scrollY>8),{passive:true});
+const hl=(n,q)=>{const i=n.toLowerCase().indexOf(q.toLowerCase());return i<0?esc(n):esc(n.slice(0,i))+"<mark>"+esc(n.slice(i,i+q.length))+"</mark>"+esc(n.slice(i+q.length))};
+function suggest(){const q=$("#q").value.trim(),g=$("#sg");if(!q||ST!=1){g.hidden=true;return}
+ const l=find(q).slice(0,5);sgI=-1;
+ g.innerHTML=l.length?l.map(p=>`<a class="sgi" href="#/product/${enc(p.id)}"><span class="sgt">${img(p)}</span><span class="sgx"><b>${hl(p.n,q)}</b><small>${esc([p.br,p.cat].filter(Boolean).join(" · "))}</small></span><em>${fmt(p.p)}</em></a>`).join("")+`<a class="sga" href="#/search/${enc(q)}">See all results for “${esc(q)}”</a>`:`<p class="em" style="padding:20px">No matches for “${esc(q)}”</p>`;
+ g.hidden=false}
+$("#q").addEventListener("input",()=>{clearTimeout(sgT);sgT=setTimeout(suggest,120)});
+$("#q").addEventListener("focus",suggest);
+$("#q").addEventListener("keydown",e=>{
+ if(e.key=="Escape"){$("#sg").hidden=true;return}
+ const it=$$("#sg .sgi");if(!it.length||$("#sg").hidden)return;
+ if(e.key=="ArrowDown"||e.key=="ArrowUp"){e.preventDefault();sgI=e.key=="ArrowDown"?(sgI+1)%it.length:(sgI<=0?it.length-1:sgI-1);it.forEach((x,i)=>x.classList.toggle("on",i==sgI))}
+ else if(e.key=="Enter"&&sgI>=0){e.preventDefault();location.hash=it[sgI].getAttribute("href")}});
+document.addEventListener("click",e=>{if(!e.target.closest("#sf"))$("#sg").hidden=true});
+
+setShell();route();load();
+</script>
+</body>
+</html>
