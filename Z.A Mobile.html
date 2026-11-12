@@ -7,7 +7,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <style>
+    
 :root{--bg:#fff;--tx:#0a0a0a;--mut:#6b7280;--sf:#f5f6f8;--bd:#e8eaee;--pr:#2563eb;--or:#ff6b2c;--dk:#0b1020;--card:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0f1a;--tx:#f3f4f6;--mut:#9aa3b2;--sf:#121829;--bd:#232b3f;--card:#10162a;--dk:#060913}}
 :root[data-theme="dark"]{--bg:#0b0f1a;--tx:#f3f4f6;--mut:#9aa3b2;--sf:#121829;--bd:#232b3f;--card:#10162a;--dk:#060913}
@@ -228,10 +232,9 @@ header{transition:box-shadow .25s}header.sc{box-shadow:0 6px 24px #0000001a}
 @media(min-width:769px){.wa{bottom:24px}.toast{bottom:30px}}
 @media(max-width:768px){footer{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rvl{opacity:1;transform:none}}
-</style>
-</head>
-<body>
-<div class="top">Free delivery on orders over <b>Rs. 5,000</b> &nbsp;|&nbsp; Cash on Delivery Available</div>
+
+  </style>
+<!-- <div class="top">Free delivery on orders over <b>Rs. 5,000</b> &nbsp;|&nbsp; Cash on Delivery Available</div> -->
 <header>
  <div class="hd">
   <button class="burger" data-a="menu" aria-label="Open menu"><i class="bi bi-list"></i></button>
@@ -374,7 +377,7 @@ home:()=>gate(()=>{
  <section class="sec"><div class="pm">
   <div class="a"><span style="color:var(--pr);font-weight:700;font-size:12px">Style your phone</span><h3>Premium cases<br>and covers</h3><div><a class="btn w2" href="${catLink("case|cover")}" style="border:1px solid #cfd8ee">Shop cases</a></div><span class="sh2"></span></div>
   <div class="b"><span style="color:#8fb0ff;font-weight:700;font-size:12px">Power up, worry-free</span><h3>Original chargers.<br>Warranty included.</h3><div><a class="btn or" href="${catLink("charger")}">Shop chargers</a></div><span class="wt">30W</span></div>
- </div></section>`)+`<section class="why"><div class="w"><h2>Shop with complete confidence</h2><div class="wg"><div><i class="bi bi-shield-check"></i><b>100% original</b>Authentic products, guaranteed</div><div><i class="bi bi-patch-check"></i><b>Official warranty</b>Local and international warranty</div><div><i class="bi bi-truck"></i><b>Fast delivery</b>2–4 days across Pakistan</div><div><i class="bi bi-arrow-counterclockwise"></i><b>Easy returns</b>7-day hassle-free returns</div><div><i class="bi bi-headset"></i><b>Always here</b>Support whenever you need it</div></div></div></section>`+W(`<div class="nl"><div><h3>Be first to know.</h3><small>New drops, price alerts and members-only deals.</small></div><form id="nf"><input type="email" required placeholder="Enter your email" aria-label="Email"><button class="btn">Subscribe</button></form></div>`)}),
+ </div></section>`)+`<section class="why"><div class="w"><h2>Shop with complete confidence</h2><div class="wg"><div><i class="bi bi-shield-check"></i><b>100% original</b>Authentic products, guaranteed</div><div><i class="bi bi-patch-check"></i><b>Official warranty</b>Local and international warranty</div><div><i class="bi bi-truck"></i><b>Fast delivery</b>7–10 days across Pakistan</div><div><i class="bi bi-arrow-counterclockwise"></i><b>Easy returns</b>7-day hassle-free returns</div><div><i class="bi bi-headset"></i><b>Always here</b>Support whenever you need it</div></div></div></section>`+W(`<div class="nl"><div><h3>Be first to know.</h3><small>New drops, price alerts and members-only deals.</small></div><form id="nf"><input type="email" required placeholder="Enter your email" aria-label="Email"><button class="btn">Subscribe</button></form></div>`)}),
 
 shop:(k,v)=>gate(()=>{
  let l=[...P],t="All products";
@@ -399,15 +402,15 @@ product:id=>gate(()=>{
  <div class="stk ${out?"out":lo?"lo":"in2"}">${out?"Out of stock":lo?"Only "+p.st+" left":"In stock"}</div>
  <div class="qb"><div class="qs"><button data-a="qm" aria-label="Less"><i class="bi bi-dash"></i></button><span id="qt">1</span><button data-a="qp" aria-label="More"><i class="bi bi-plus"></i></button></div><button class="btn" data-a="addq" data-id="${esc(p.id)}" ${d}><i class="bi bi-cart-plus"></i> Add to cart</button><button class="btn or" data-a="buy" data-id="${esc(p.id)}" ${d}>Buy now</button></div>
  <a class="btn ok" style="display:block" href="https://wa.me/${wa()}?text=${msg}" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Order on WhatsApp</a>
- <div class="bx"><div><i class="bi bi-truck"></i>Delivery in 2–4 days across Pakistan</div><div><i class="bi bi-shield-check"></i>100% original with warranty</div><div><i class="bi bi-cash-coin"></i>Cash on delivery available</div></div></div></div>
+ <div class="bx"><div><i class="bi bi-truck"></i>Delivery in 7–10 days across Pakistan</div><div><i class="bi bi-shield-check"></i>100% original with warranty</div><div><i class="bi bi-cash-coin"></i>Cash on delivery available</div></div></div></div>
  <div class="tb"><button class="on" data-a="tab" data-v="0">Description</button><button data-a="tab" data-v="1">Specifications</button><button data-a="tab" data-v="2">Delivery and returns</button></div>
- <div class="tp">${p.desc?esc(p.desc):"No description added yet."}</div><div class="tp" hidden>${specs(p.sp)||"No specifications added yet."}</div><div class="tp" hidden>Delivery takes 2–4 days across Pakistan. Free delivery on orders over Rs. 5,000, otherwise Rs. 250. Returns are accepted within 7 days if the item is unused and in its original packaging.</div>
+ <div class="tp">${p.desc?esc(p.desc):"No description added yet."}</div><div class="tp" hidden>${specs(p.sp)||"No specifications added yet."}</div><div class="tp" hidden>Delivery takes 7–10 days across Pakistan. Free delivery on orders over Rs. 5,000, otherwise Rs. 250. Returns are accepted within 7 days if the item is unused and in its original packaging.</div>
  ${rel.length?`<section class="sec"><div class="sh"><h2>You may also like</h2></div>${grid(rel)}</section>`:""}`)}),
 
 about:()=>pg("About us",`<p>Z.A Mobile is a mobile phone and accessories shop in ${esc(S.city)}, Pakistan. We sell original smartphones, earbuds, chargers, cables, cases and more at honest prices.</p><h3>What we stand for</h3><p>Original products, clear prices and real support. Not sure what to buy? Message us on WhatsApp and we’ll help you choose.</p><p><a class="btn" href="#/shop" style="width:auto">Browse products</a></p>`),
 contact:()=>W(`<section class="sec pg2"><nav class="bc"><a href="#/">Home</a><span>/</span><span>Contact</span></nav><h1>Contact us</h1><div class="cx"><div class="ci2"><a href="tel:${esc(S.phone)}"><i class="bi bi-telephone"></i><span><small>Call us</small>${esc(S.phone)}</span></a><a href="https://wa.me/${wa()}" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i><span><small>WhatsApp</small>Chat with us</span></a><a href="https://www.google.com/maps/search/?api=1&query=${enc(S.address+" "+S.city)}" target="_blank" rel="noopener"><i class="bi bi-geo-alt"></i><span><small>Visit the shop</small>${esc(S.address)}, ${esc(S.city)}</span></a></div>
  <form class="fm" id="cf"><label>Your name<input name="n" required></label><label>Phone<input name="p" type="tel" required></label><label>Message<textarea name="m" rows="4" required></textarea></label><button class="btn"><i class="bi bi-whatsapp"></i> Send on WhatsApp</button></form></div></section>`),
-shipping:()=>pg("Shipping info",`<p>We deliver across Pakistan in 2–4 working days.</p><p>Delivery is free on orders over Rs. 5,000. Orders below that pay a flat Rs. 250.</p><p>Payment is cash on delivery.</p>`),
+shipping:()=>pg("Shipping info",`<p>We deliver across Pakistan in 7–10 working days.</p><p>Delivery is free on orders over Rs. 5,000. Orders below that pay a flat Rs. 250.</p><p>Payment is cash on delivery.</p>`),
 returns:()=>pg("Returns",`<p>You can return an item within 7 days of delivery if it is unused and in its original packaging.</p><p>To start a return, message us on WhatsApp with your order details.</p>`),
 warranty:()=>pg("Warranty",`<p>Phones and accessories come with the manufacturer’s or shop warranty stated on the product.</p><p>Keep your invoice. Warranty does not cover physical or water damage.</p>`),
 privacy:()=>pg("Privacy policy",`<p>We only use the details you send us (name, phone, address) to process and deliver your order.</p><p>Your order is sent to the shop so we can confirm and deliver it. This site does not store card or payment details.</p>`),
